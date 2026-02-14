@@ -663,7 +663,6 @@ do
 
     local logo = drawing_proxy["new"]("Image", {
         ["Color"] = menu["colors"]["accent"],
-        ["Data"] = readfile("juju recode/assets/logo.png"),
         ["Position"] = udim2_new(0, 15, 0, 15),
         ["Parent"] = inside,
         ["Size"] = udim2_new(0, 35, 0, 35),
