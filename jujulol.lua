@@ -2783,7 +2783,7 @@ do
         ["Color"] = color3_fromrgb(255, 0, 0),
         ["Transparency"] = 1,
         ["Rounding"] = 4,
-        ["Data"] = readfile("juju recode/assets/saturation.png"),
+
         ["ZIndex"] = 1001,
         ["Visible"] = true,
     })
@@ -8002,7 +8002,7 @@ do
         -- >> ( data )
 
         local s, data = pcall(function()
-            return http_service:JSONDecode(readfile("juju recode/data.dat"))
+      
         end)
 
         if s and data then
@@ -14058,13 +14058,7 @@ do
     local sound_service = cloneref(game:GetService("SoundService"))
 
     local hit_sounds = {
-        ["primordial"] = readfile("juju recode/assets/primordial.ogg"),
-        ["neverlose"] = readfile("juju recode/assets/neverlose.ogg"),
-        ["sparkle"] = readfile("juju recode/assets/sparkle.ogg"),
-        ["mc bow"] = readfile("juju recode/assets/mc bow.ogg"),
-        ["break"] = readfile("juju recode/assets/break.ogg"),
-        ["skeet"] = readfile("juju recode/assets/skeet.ogg"),
-        ["rust"] = readfile("juju recode/assets/rust.ogg"),
+
     }
 
     for _, data in hit_sounds do
@@ -14293,7 +14287,7 @@ do
     -- >> ( hit overlay )
 
     local hit_overlay_connection = nil
-    local data = readfile("juju recode/assets/1.png")
+    local data = print('dix that')
 
     local hit_image = nil
     local last_hit = clock()
@@ -23436,7 +23430,7 @@ do
                     local create_fake_drawing = getgenv()["_PROXY"]["new"]
                     local color = flags["custom_kick_screen_color"]
                     local path = "juju recode/"..(background == "2.png" and "assets/2.png" or "custom/"..background)
-                    local data = isfile(path) and readfile(path) or readfile("juju recode/assets/2.png")
+                    local data = isfile(path) and readfile(path)
                     local message_label = error["MessageArea"]["ErrorFrame"]["ErrorMessage"]
                     local message = error["MessageArea"]["ErrorFrame"]["ErrorMessage"]
                     error["Visible"] = false
@@ -23475,7 +23469,7 @@ do
                         ["Color"] = color3_fromrgb(255, 255, 255),
                         ["Size"] = udim2_new(0, 100, 0, 100),
                         ["Position"] = udim2_new(0.5, -50, 0.45, -50),
-                        ["Data"] = readfile("juju recode/assets/logo.png"),
+  
                         ["Transparency"] = 0,
                         ["Parent"] = background,
                         ["Visible"] = true,
